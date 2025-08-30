@@ -24,6 +24,7 @@ int main(int /* argc */, char** argv) {
 
     aidl::android::adbroot::ADBRootService::Register();
 
+    ABinderProcess_setThreadPoolMaxThreadCount(6);
     ABinderProcess_startThreadPool();
     ABinderProcess_joinThreadPool();
 
